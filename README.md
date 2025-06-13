@@ -1,13 +1,21 @@
-Dataset 1: DOTA v1
-Installation procedure- 
-1. Go to https://github.com/ultralytics/assets/releases/download/v0.0.0/DOTAv1.zip
-2. Your download will automatically start (File Size - 1.99GB)
-3. Place the files in this heirarchy:
-    parent
-    ├── ultralytics
-    └── datasets
-        └── dota1  ← downloads here (2GB)
-4. To train the dataset efficiently we have to split each image into resolution of 1024x1024. Run DOTAv1-Prep.py to prepare the data for        training automatically
+Dataset 1: UAVDT
+Installation procedure-
+
+1. Run pip install --upgrade dataset-tools in the terminal.
+2. Run UAVDT.py in your working directory to download the dataset in the proper heirarchy.
+
+Dataset 2: VisDrone
+Installation procedure-
+
+1. Go to terminal and run: yolo train data=VisDrone.yaml
+2. The dataset will automatically download to /datasets/VisDrone and the annotations will be converted to YOLO format.
+
+Dataset 3: DOTAv1
+Installation procedure-
+
+1. Place DOTAv1.yaml in your working directory
+2. Go to terminal and run: yolo train data=DOTAv1.yaml
+3. The dataset will automatically download to /datasets/DOTA-split and the annotations will be converted to YOLO format.
 
 
 
