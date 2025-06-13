@@ -1,3 +1,4 @@
+Drone/Overhead/ISR Datasets:
 Dataset 1: UAVDT
 Installation procedure-
 
@@ -17,10 +18,11 @@ Installation procedure-
 2. Go to terminal and run: yolo train data=DOTAv1.yaml
 3. The dataset will automatically download to /datasets/DOTA-split and the annotations will be converted to YOLO format.
 
-Dataset 1-Aerial/SAR: DOTAv2 
+Aerial/SAR Datasets:
+Dataset 1: DOTAv2 
 Installation procedure-
 
 1. pip install git-lfs
 2. git lfs install
-3. git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   # 2 GB, contains DOTAv2.zip
+3. git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   
 
