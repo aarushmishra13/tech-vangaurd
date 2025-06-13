@@ -7,3 +7,9 @@ UAVDT,Drone/Overhead,77819,Academic-only,https://datasetninja.com/uavdt
 Det-Fly,Drone/Overhead,13000,Academic-only,https://github.com/Jake-WU/Det-Fly
 xView,SAR/Aerial,1400,CC BY-NC-SA 4.0,https://xviewdataset.org/
 Military Aircraft Recognition Dataset,SAR/Aerial,3841,GPL 2,https://www.kaggle.com/datasets/khlaifiabilel/military-aircraft-recognition-dataset
+"RF Signal Data (SDR/DragonOS)","RF Signal / Waveform",164159,"CC0 1.0 Public Domain","https://www.kaggle.com/datasets/suraj520/rf-signal-data"
+"Noisy Drone RF Signal Classification (ZHAW)","RF Signal / Waveform",690000,"CC BY 4.0","https://www.kaggle.com/datasets/sgluege/noisy-drone-rf-signal-classification"
+"TorchSig Sig53 Synthetic Narrowband","RF Signal / Waveform",5300000,"MIT","https://github.com/TorchDSP/torchsig"
+"NIST Incumbent Radar Dataset (3.5 GHz CBRS)","RF Signal / Waveform",40000,"U.S. Public Domain","https://doi.org/10.18434/M32116"
+"Drone Remote Controller RF Dataset (NCSU)","RF Signal / Waveform",17000,"CC BY 4.0","https://dx.doi.org/10.21227/SS99-8D56"
+"RadioML 2016.10A","RF Signal / Waveform",220000,"CC BY-NC-SA 4.0","https://opendata.deepsig.io/datasets/radioml/RML2016.10a.tar.bz2"
