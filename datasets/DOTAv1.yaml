@@ -1,0 +1,64 @@
+# DOTA v1.0 dataset for object detection in aerial images
+# Documentation: https://captain-whu.github.io/DOTA/dataset.html
+# Example usage: yolo train data=DOTAv1.yaml
+
+path: ../datasets/DOTA-split  # dataset root dir
+train: images/train  # train images (relative to 'path')
+val: images/val      # val images (relative to 'path')
+test: images/test    # test images (optional)
+
+# Classes (15 categories in DOTA v1.0)
+names:
+  0: plane
+  1: baseball-diamond
+  2: bridge
+  3: ground-track-field
+  4: small-vehicle
+  5: large-vehicle
+  6: ship
+  7: tennis-court
+  8: basketball-court
+  9: storage-tank
+  10: soccer-ball-field
+  11: roundabout
+  12: harbor
+  13: swimming-pool
+  14: helicopter
+
+# Download script
+download: |
+  import os
+  from pathlib import Path
+  from ultralytics.utils.downloads import download
+  from ultralytics.data.split_dota import split_test, split_trainval
+  
+  # Download
+  dir = Path("../datasets/DOTA")  # dataset root dir
+  urls = ["https://github.com/ultralytics/assets/releases/download/v0.0.0/DOTAv1.zip"]
+  download(urls, dir=dir.parent, curl=True, threads=4)
+  
+  # Extract if needed
+  import zipfile
+  zip_path = dir.parent / "DOTAv1.zip"
+  if zip_path.exists():
+      with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+          zip_ref.extractall(dir.parent)
+  
+  # Split train and val set, with labels
+  split_trainval(
+      data_root=str(dir),
+      save_dir=str(dir.parent / "DOTA-split"),
+      rates=[0.5, 1.0, 1.5],  # multiscale
+      gap=500,
+  )
+  
+  # Split test set, without labels
+  split_test(
+      data_root=str(dir),
+      save_dir=str(dir.parent / "DOTA-split"),
+      rates=[0.5, 1.0, 1.5],  # multiscale
+      gap=500,
+  )
+  
+  print("DOTA v1.0 dataset downloaded and split successfully!")
+  print("Dataset ready for training at: ../datasets/DOTA-split")
