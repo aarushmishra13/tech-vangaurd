@@ -1,3 +1,5 @@
+Drone/Overhead/ISR Datasets:
+
 Dataset 1: UAVDT
 Installation procedure-
 
@@ -17,12 +19,10 @@ Installation procedure-
 2. Go to terminal and run: yolo train data=DOTAv1.yaml
 3. The dataset will automatically download to /datasets/DOTA-split and the annotations will be converted to YOLO format.
 
---------
+RF Signal/Waveform Datasets:
+All commands assume a Bash-like shell (macOS/Linux, WSL, or PowerShell with `bash` syntax).
 
-# RF Signal / Waveform Datasets
-*All commands assume a Bash-like shell (macOS/Linux, WSL, or PowerShell with `bash` syntax).*
-
-## Dataset 1 — Noisy Drone RF (ZHAW)
+Dataset 1: Noisy Drone RF (ZHAW)
 
 ```bash
 # 1 Download
@@ -38,7 +38,7 @@ python convert_noisydrone.py --root datasets/NoisyDroneRF --img_size 224
 cp datasets/NoisyDroneRF/NoisyDroneRF.yaml .
 ```
 
-## Dataset 2 — TorchSig (synthetic)
+Dataset 2: TorchSig (synthetic)
 
 ```bash
 # 1 Install + generate a 10 k-sample narrowband set
@@ -49,7 +49,7 @@ python generate_torchsig_dataset.py --root datasets/TorchSig --samples 10000
 cp datasets/TorchSig/TorchSig.yaml .
 ```
 
-## Dataset 3 — RadioML 2016.10A
+Dataset 3: RadioML 2016.10A
 
 ```bash
 # 1 Download
@@ -65,4 +65,12 @@ python convert_radioml2016.py --root datasets/RadioML2016 --img_size 224
 cp datasets/RadioML2016/RadioML2016.yaml .
 ```
 
+Aerial/SAR Datasets:
+
+Dataset 1: DOTAv2 
+Installation procedure-
+
+1. pip install git-lfs
+2. git lfs install
+3. git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   
 
