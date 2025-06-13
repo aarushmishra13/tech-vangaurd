@@ -85,20 +85,6 @@ cp datasets/RadioML2016/RadioML2016.yaml .
 ```
 _____________________________________________________________________________________________
 
-Aerial/SAR Datasets:
-
-**Dataset 1: DOTAv2**
-
-```bash
-# Step 1
-pip install git-lfs
-
-# Step 2
-git lfs install
-
-# Step 3
-git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   
-```  
 
 Aerial/SAR Datasets:
 
@@ -114,6 +100,7 @@ git lfs install
 # Step 3
 git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   
 ```  
+_____________________________________________________________________________________________
 
 Automotive Radar Datasets:
 
