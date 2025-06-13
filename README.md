@@ -100,3 +100,88 @@ git lfs install
 git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   
 ```  
 
+Aerial/SAR Datasets:
+
+**Dataset 1: DOTAv2**
+
+```bash
+# Step 1
+pip install git-lfs
+
+# Step 2
+git lfs install
+
+# Step 3
+git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   
+```  
+
+Automotive Radar Datasets:
+
+**Dataset 1: Heriot-Watt RADIATE Dataset**
+```bash
+# Step 1
+git clone https://github.com/marcelsheeny/radiate_sdk.git
+
+# Step 2
+cd radiate_sdk
+
+# Step 3
+pip install -r requirements.txt
+```
+
+**Dataset 2: The RadarScenes data set**
+```bash
+# Step 1 Install kagglehub
+pip install kagglehub
+
+# Step 2 Run the python script to load data in pandas dataframe
+import kagglehub
+from kagglehub import KaggleDatasetAdapter
+
+# Set the path to the file you'd like to load
+file_path = ""
+
+# Load the latest version
+df = kagglehub.load_dataset(
+  KaggleDatasetAdapter.PANDAS,
+  "aleksandrdubrovin/the-radarscenes-data-set",
+  file_path,
+  # Provide any additional arguments like 
+  # sql_query or pandas_kwargs. See the 
+  # documenation for more information:
+  # https://github.com/Kaggle/kagglehub/blob/main/README.md#kaggledatasetadapterpandas
+)
+```
+
+
+**Dataset 3: Austin Radar Traffic Dataset**
+```bash
+# Step 1 Install kagglehub
+pip install kagglehub
+
+# Step 2 Run the python script to load data in pandas dataframe
+import kagglehub
+from kagglehub import KaggleDatasetAdapter
+
+# Set the path to the file you'd like to load
+file_path = ""
+
+# Load the latest version
+df = kagglehub.load_dataset(
+  KaggleDatasetAdapter.PANDAS,
+  "vinayshanbhag/radar-traffic-data",
+  file_path,
+  # Provide any additional arguments like 
+  # sql_query or pandas_kwargs. See the 
+  # documenation for more information:
+  # https://github.com/Kaggle/kagglehub/blob/main/README.md#kaggledatasetadapterpandas
+)
+
+```
+
+
+
+
+
+
+
