@@ -1,36 +1,64 @@
-# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+# DOTA v1.0 dataset for object detection in aerial images
+# Documentation: https://captain-whu.github.io/DOTA/dataset.html
+# Example usage: yolo train data=DOTAv1.yaml
 
-# DOTA 1.0 dataset https://captain-whu.github.io/DOTA/index.html for object detection in aerial images by Wuhan University
-# Documentation: https://docs.ultralytics.com/datasets/obb/dota-v2/
-# Example usage: yolo train model=yolov8n-obb.pt data=DOTAv1.yaml
-# parent
-# ├── ultralytics
-# └── datasets
-#     └── dota1  ← downloads here (2GB)
+path: ../datasets/DOTA-split  # dataset root dir
+train: images/train  # train images (relative to 'path')
+val: images/val      # val images (relative to 'path')
+test: images/test    # test images (optional)
 
-# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: ../datasets/DOTAv1 # dataset root dir
-train: images/train # train images (relative to 'path') 1411 images
-val: images/val # val images (relative to 'path') 458 images
-test: images/test # test images (optional) 937 images
-
-# Classes for DOTA 1.0
+# Classes (15 categories in DOTA v1.0)
 names:
   0: plane
-  1: ship
-  2: storage tank
-  3: baseball diamond
-  4: tennis court
-  5: basketball court
-  6: ground track field
-  7: harbor
-  8: bridge
-  9: large vehicle
-  10: small vehicle
-  11: helicopter
-  12: roundabout
-  13: soccer ball field
-  14: swimming pool
+  1: baseball-diamond
+  2: bridge
+  3: ground-track-field
+  4: small-vehicle
+  5: large-vehicle
+  6: ship
+  7: tennis-court
+  8: basketball-court
+  9: storage-tank
+  10: soccer-ball-field
+  11: roundabout
+  12: harbor
+  13: swimming-pool
+  14: helicopter
 
-# Download script/URL (optional)
-download: https://github.com/ultralytics/assets/releases/download/v0.0.0/DOTAv1.zip
+# Download script
+download: |
+  import os
+  from pathlib import Path
+  from ultralytics.utils.downloads import download
+  from ultralytics.data.split_dota import split_test, split_trainval
+  
+  # Download
+  dir = Path("../datasets/DOTA")  # dataset root dir
+  urls = ["https://github.com/ultralytics/assets/releases/download/v0.0.0/DOTAv1.zip"]
+  download(urls, dir=dir.parent, curl=True, threads=4)
+  
+  # Extract if needed
+  import zipfile
+  zip_path = dir.parent / "DOTAv1.zip"
+  if zip_path.exists():
+      with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+          zip_ref.extractall(dir.parent)
+  
+  # Split train and val set, with labels
+  split_trainval(
+      data_root=str(dir),
+      save_dir=str(dir.parent / "DOTA-split"),
+      rates=[0.5, 1.0, 1.5],  # multiscale
+      gap=500,
+  )
+  
+  # Split test set, without labels
+  split_test(
+      data_root=str(dir),
+      save_dir=str(dir.parent / "DOTA-split"),
+      rates=[0.5, 1.0, 1.5],  # multiscale
+      gap=500,
+  )
+  
+  print("DOTA v1.0 dataset downloaded and split successfully!")
+  print("Dataset ready for training at: ../datasets/DOTA-split")
