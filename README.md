@@ -4,7 +4,6 @@
 Drone/Overhead/ISR Datasets:
 
 **Dataset 1: UAVDT**
-Installation procedure-
 
 ```bash
 # 1. Install/Upgrade Dataset Tools
@@ -16,7 +15,6 @@ python UAVDT.py
 *Run UAVDT.py in your **working directory** to download the dataset in the proper heirarchy.*
 
 **Dataset 2: VisDrone**
-Installation procedure-
 
 ```bash
 # 1. Install/Upgrade Ultralytics
@@ -28,7 +26,6 @@ yolo train data=VisDrone.yaml
 *The dataset will automatically download to /datasets/VisDrone and the annotations will be converted to YOLO format.*
 
 **Dataset 3: DOTAv1**
-Installation procedure-
 
 ```bash
 # 1. Install/Upgrade Ultralytics
@@ -87,7 +84,6 @@ cp datasets/RadioML2016/RadioML2016.yaml .
 Aerial/SAR Datasets:
 
 **Dataset 1: DOTAv2**
-Installation procedure-
 
 ```bash
 # Step 1
