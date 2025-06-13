@@ -8,3 +8,4 @@ Det-Fly,Drone/Overhead,13000,Academic-only,https://github.com/Jake-WU/Det-Fly
 xView,SAR/Aerial,1400,CC BY-NC-SA 4.0,https://xviewdataset.org/
 Military Aircraft Recognition Dataset,SAR/Aerial,3841,GPL 2,https://www.kaggle.com/datasets/khlaifiabilel/military-aircraft-recognition-dataset
 DOTAv2,Ariel/Sat,2806,Academic Non-Commercial,https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2
+BigEarthNet S1/S2,Ariel/Sat,549488,Community Data License Agreement – Permissive, Version 1.0,https://bigearth.net/#downloads
