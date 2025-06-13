@@ -2,5 +2,8 @@ Name,Modality,Sample Size,Licence,Link
 DOTAv1,Drone/Overhead,2806,AGPL-3.0 License,https://github.com/ultralytics/assets/releases/download/v0.0.0/DOTAv1.zip
 VEDAI,Drone/Overhead,1250,Non-commercial License,https://downloads.greyc.fr/vedai/
 People Overhead,Drone/Overhead,881,CC0,https://www.kaggle.com/datasets/hifrom/people-overhead
+VisDrone,Drone/Overhead,10209,CC-BY-NC-SA-3.0,https://github.com/VisDrone/VisDrone-Dataset
+UAVDT,Drone/Overhead,77819,Academic-only,https://datasetninja.com/uavdt
+Det-Fly,Drone/Overhead,13000,Academic-only,https://github.com/Jake-WU/Det-Fly
 xView,SAR/Aerial,1400,CC BY-NC-SA 4.0,https://xviewdataset.org/
 Military Aircraft Recognition Dataset,SAR/Aerial,3841,GPL 2,https://www.kaggle.com/datasets/khlaifiabilel/military-aircraft-recognition-dataset
