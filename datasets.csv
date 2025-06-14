@@ -15,3 +15,6 @@ TorchSig Sig53 Synthetic Narrowband,RF Signal / Waveform,5300000,MIT,https://git
 NIST Incumbent Radar Dataset (3.5 GHz CBRS),RF Signal / Waveform,40000,U.S. Public Domain,https://doi.org/10.18434/M32116
 Drone Remote Controller RF Dataset (NCSU),RF Signal / Waveform,17000,CC BY 4.0,https://dx.doi.org/10.21227/SS99-8D56
 RadioML 2016.10A,RF Signal / Waveform,220000,CC BY-NC-SA 4.0,https://opendata.deepsig.io/datasets/radioml/RML2016.10a.tar.bz2
+Heriot-Watt RADIATE Dataset,Automotive Radar,58147392,MIT License,https://pro.hw.ac.uk/radiate/
+The RadarScenes data set,Automotive Radar,40500,CC BY-NC-SA 4.0,https://www.kaggle.com/datasets/aleksandrdubrovin/the-radarscenes-data-set/data
+Austin Radar Traffic Data,Automotive Radar,404100000,CC0: Public Domain,https://www.kaggle.com/datasets/vinayshanbhag/radar-traffic-data
