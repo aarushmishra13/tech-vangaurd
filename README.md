@@ -169,5 +169,17 @@ df = kagglehub.load_dataset(
 
 
 
+**DOTAv2** | `wget ...DOTAv2.zip && unzip` | `datasets/DOTAv2/` | `python converters/dota2yolo_obb.py --dota_root datasets/DOTAv2 --out_root datasets/DOTAv2/labels` |
+
+**BigEarthNet‑S2** | Manual download | `datasets/BigEarthNet-S2/` | _Classification only – no conversion needed_ |
+
+**BigEarthNet‑S1** | Manual download | `datasets/BigEarthNet-S1/` | _Classification only – no conversion needed_ |
+
+**Military Aircraft Detection** | `kaggle datasets download -d a2015003713/... --unzip` | `datasets/MilitaryAircraftDetection/` | `python converters/mad_csv2yolo.py --csv datasets/MilitaryAircraftDetection/labels_with_split.csv --img_dir datasets/MilitaryAircraftDetection/dataset --out_dir datasets/MilitaryAircraftDetection/labels` |
+
+**MAR20 Aircraft Recognition** | `kaggle datasets download -d khlaifiabilel/... --unzip` | `datasets/MAR20/` | `python converters/voc2yolo.py --ann_dir datasets/MAR20/Annotations/Horizontal\ Bounding\ Box --img_dir datasets/MAR20/JPEGImages --out_dir datasets/MAR20/labels` |
+
+**HRSID** | `git clone https://github.com/chaozhong2010/HRSID` | `datasets/HRSID/` | `python converters/coco2yolo.py --json datasets/HRSID/annotations/instances_train.json --img_root datasets/HRSID/images/train --out_dir datasets/HRSID/labels/train` |
+
 
 
