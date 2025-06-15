@@ -156,7 +156,6 @@ python converters/coco2yolo.py \
        --json      datasets/HRSID/annotations/instances_train.json \
        --img_root  datasets/HRSID/images/train \
        --out_dir   datasets/HRSID/labels/train
-# (repeat for val/test JSONs if you need them)
 _____________________________________________________________________________________________
 
 Automotive Radar Datasets:
