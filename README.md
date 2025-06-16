@@ -84,21 +84,78 @@ python convert_radioml2016.py --root datasets/RadioML2016 --img_size 224
 cp datasets/RadioML2016/RadioML2016.yaml .
 ```
 _____________________________________________________________________________________________
+Dataset 1: DOTAv2
 
-Aerial/SAR Datasets:
-
-**Dataset 1: DOTAv2**
-
-```bash
-# Step 1
+# 1. Install Git-LFS (large-file support)
 pip install git-lfs
+git lfs install                          # one-time setup
 
-# Step 2
-git lfs install
+# 2. Download (≈2 GB)
+git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2
 
-# Step 3
-git clone https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2   
-```  
+# 3. Convert & tile to YOLO-OBB (1024 × 1024 crops)
+python converters/dota2yolo_obb.py \
+       --dota_root datasets/DOTAv2 \
+       --out_root datasets/DOTAv2/labels
+
+
+
+Dataset 2: BigEarthNet (Sentinel-1 + Sentinel-2)
+
+# 1. Manual download (~59 GB optical + 51 GB SAR)
+#    https://bigearth.net/#downloads  (grab both S2 and S1 zips)
+
+# 2. Unzip to the expected folders
+mkdir -p datasets/BigEarthNet-S2  && unzip BigEarthNet-S2.zip  -d datasets/BigEarthNet-S2
+mkdir -p datasets/BigEarthNet-S1  && unzip BigEarthNet-S1.zip  -d datasets/BigEarthNet-S1
+
+
+
+Dataset 3: Military Aircraft Detection
+
+# 1. Install Kaggle CLI
+pip install kaggle pandas
+
+# 2. Download & unzip  (≈11 GB)
+mkdir -p datasets/MilitaryAircraftDetection
+kaggle datasets download a2015003713/militaryaircraftdetectiondataset -p datasets/MilitaryAircraftDetection
+unzip datasets/MilitaryAircraftDetection/*.zip -d datasets/MilitaryAircraftDetection
+
+# 3. Convert CSV → YOLO
+python converters/mad_csv2yolo.py \
+       --csv     datasets/MilitaryAircraftDetection/labels_with_split.csv \
+       --img_dir datasets/MilitaryAircraftDetection/dataset \
+       --out_dir datasets/MilitaryAircraftDetection/labels
+
+
+
+Dataset 4: MAR20 Military Aircraft Recognition
+
+# 1. Download (≈1.2 GB)
+mkdir -p datasets/MAR20
+kaggle datasets download khlaifiabilel/military-aircraft-recognition-dataset -p datasets/MAR20
+unzip datasets/MAR20/*.zip -d datasets/MAR20
+
+# 2. Convert Pascal-VOC XML → YOLO
+python converters/voc2yolo.py \
+       --ann_dir datasets/MAR20/Annotations/Horizontal\\ Bounding\\ Box \
+       --img_dir datasets/MAR20/JPEGImages \
+       --out_dir datasets/MAR20/labels
+
+  
+
+
+
+Dataset 5: HRSID (High-Res SAR Ship)
+
+# 1. Clone repo (≈3 GB)
+git clone https://github.com/chaozhong2010/HRSID datasets/HRSID
+
+# 2. Convert COCO JSON → YOLO
+python converters/coco2yolo.py \
+       --json      datasets/HRSID/annotations/instances_train.json \
+       --img_root  datasets/HRSID/images/train \
+       --out_dir   datasets/HRSID/labels/train
 _____________________________________________________________________________________________
 
 Automotive Radar Datasets:
@@ -164,10 +221,4 @@ df = kagglehub.load_dataset(
 )
 
 ```
-
-
-
-
-
-
 
