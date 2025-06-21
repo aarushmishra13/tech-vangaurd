@@ -1,0 +1,6 @@
+path: datasets/NoisyDroneRF
+train: train
+val: val
+test: test
+nc: 7
+names: ["Mavic","Phantom","Parrot","Solo","Anafi","Inspire","Noise"]
