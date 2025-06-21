@@ -6,6 +6,7 @@ VisDrone,Drone/Overhead,10209,CC-BY-NC-SA-3.0,https://github.com/VisDrone/VisDro
 UAVDT,Drone/Overhead,77819,Academic-only,https://datasetninja.com/uavdt
 Det-Fly,Drone/Overhead,13000,Academic-only,https://github.com/Jake-WU/Det-Fly
 xView,SAR/Aerial,1400,CC BY-NC-SA 4.0,https://xviewdataset.org/
+Military Aircraft Recognition Dataset,SAR/Aerial,3841,GPL 2,https://www.kaggle.com/datasets/khlaifiabilel/military-aircraft-recognition-dataset
 DOTAv2,SAR/Aerial,2806,Academic Non-Commercial,https://huggingface.co/datasets/satellite-image-deep-learning/DOTAv2
 BigEarthNetS1/S2,SAR/Aerial,549488,Community Data License Agreement – Permissive Version 1.0,https://bigearth.net/#downloads
 Military Aircraft Detection Dataset,SAR/Aerial,12008,Unknown,https://www.kaggle.com/datasets/a2015003713/militaryaircraftdetectiondataset
