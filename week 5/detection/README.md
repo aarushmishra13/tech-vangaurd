@@ -18,7 +18,7 @@ We found out that the dataset we used already had labeled images. The label file
 
 
 
-\## Files \& Deliverables
+## Files & Deliverables
 
 
 
