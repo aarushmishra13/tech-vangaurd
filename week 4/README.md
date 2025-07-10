@@ -1,8 +1,8 @@
-\# Week-4
+# Week-4
 
 
 
-\## What Did We Do?
+## What Did We Do?
 
 
 
@@ -10,7 +10,7 @@ This week, every member of our team did their individual work on using the datas
 
 
 
-\## How Did We Do It?
+## How Did We Do It?
 
 
 
@@ -26,7 +26,7 @@ These errors will be resolved next week.
 
 
 
-\## Files and Deliverables
+## Files and Deliverables
 
 
 
