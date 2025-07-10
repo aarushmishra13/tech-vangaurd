@@ -1,8 +1,8 @@
-\# Week-3
+# Week-3
 
 
 
-\## What Did We Do?
+## What Did We Do?
 
 
 
@@ -10,7 +10,7 @@ This week we annotated the dataset we are working on and made the train - valida
 
 
 
-\## How Did We Do It?
+## How Did We Do It?
 
 
 
@@ -18,7 +18,7 @@ We chose the top 9 US Aircrafts and labeled ~9000 image. The labeling was done a
 
 
 
-\## Files and Deliverables
+## Files and Deliverables
 
 
 
