@@ -1,8 +1,8 @@
-\# Week-5
+# Week-5
 
 
 
-\## What Did We Do?
+## What Did We Do?
 
 
 
@@ -10,7 +10,7 @@ We fine-tuned the YOLOv8 model on the whole dataset.
 
 
 
-\## How Did We Do It?
+## How Did We Do It?
 
 
 
